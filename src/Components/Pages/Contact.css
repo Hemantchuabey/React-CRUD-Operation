@@ -1,0 +1,41 @@
+form{
+    margin-top: 3rem;
+    
+}
+label{
+    font-size: 1.8rem;
+}
+input{
+    width: 400px;
+    line-height: 2.6;
+    margin-top: 1rem;
+}
+div:nth-child(2),div:nth-child(3){
+    margin-right: 0.5rem;
+}
+
+textarea{
+    width: 400px;
+    line-height: 2.6;
+    margin-top: 1rem;
+}
+form>div{
+    margin-top: 2.5rem;
+}
+
+button{
+    margin-left: 22rem;
+    margin-top: 2rem;
+    width: 8.5rem;
+    line-height: 1.9rem;
+    background-color:  hsl(240, 100%, 5%);
+    color: whitesmoke;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    transition: all 0.25s ease-in;
+}
+
+button:hover{
+    background-color:  hsl(35, 85%, 58%);
+    color: hsl(240, 100%, 5%);
+}
