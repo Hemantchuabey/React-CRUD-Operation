@@ -1,0 +1,49 @@
+table{
+    width: 80vw;
+    margin: 40px auto;
+    font-size: 1.1rem;
+    box-shadow: 4px 4px 12px -1px rgba(0,0,0,0.75);
+}
+
+thead{
+    background-color: black;
+    color: whitesmoke;
+    line-height: 2.2rem;
+}
+.userTh{
+    background-color: black;
+    color: whitesmoke;
+    line-height: 2.2rem;
+}
+.view,.edit,.delete{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+.view{
+    margin-left: 0.8rem;
+    margin-top: 0.6rem;
+}
+
+.edit{
+margin-left: 0.8rem;
+margin-top: 0.6rem;
+}
+.delete{
+    margin-left: 0.8rem;
+    margin-top: 0.6rem;
+}
+.view:hover{
+    background-color: rgb(85, 189, 230);
+    color: whitesmoke;
+}
+
+.edit:hover{
+    background-color: rgb(14, 152, 58);
+    color: whitesmoke;
+}
+.delete:hover{
+    background-color: red;
+    color: whitesmoke;
+}

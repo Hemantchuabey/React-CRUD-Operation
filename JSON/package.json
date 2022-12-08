@@ -1,0 +1,17 @@
+{
+  "name": "json",
+  "version": "1.0.0",
+  "description": "json server",
+  "main": "db.json",
+  "dependencies": {
+    "json-server": "^0.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "json-server start",
+    "json-server": "json-server --watch db.json"
+  },
+  "author": "",
+  "license": "ISC"
+}
