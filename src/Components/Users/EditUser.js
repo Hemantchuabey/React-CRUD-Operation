@@ -1,8 +1,9 @@
 import axios from "axios";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
-function AddUser() {
+function EditUser() {
+  const { id } = useParams();
   const [user, setUser] = useState({
     name: "",
     username: "",
@@ -10,21 +11,30 @@ function AddUser() {
     phone: "",
     website: "",
   });
+  useEffect(() => {
+    loaduser();
+  }, []);
   const navigate = useNavigate();
-  const onAddUserInput = (event) => {
+  const onEditInput = (event) => {
     setUser({ ...user, [event.target.name]: event.target.value });
   };
   const onSubmitNewUser = async (event) => {
     console.log(user);
     event.preventDefault();
-    await axios.post("http://localhost:3003/users", user);
+    await axios.put(`http://localhost:3003/users/${id}`, user);
     navigate("/", { replace: true });
     // event.preventDefault();
   };
 
+  const loaduser = async (event) => {
+    const result = await axios.get(`http://localhost:3003/users/${id}`);
+    setUser(result.data);
+    console.log(result.data);
+  };
+
   return (
     <div>
-      <h1>Add Users</h1>
+      <h1>Edit {user.name} Data</h1>
       <form style={{ width: "100vw" }} onSubmit={(e) => onSubmitNewUser(e)}>
         <div>
           <input
@@ -33,7 +43,7 @@ function AddUser() {
             name="name"
             value={user.name}
             onChange={(event) => {
-              onAddUserInput(event);
+              onEditInput(event);
             }}
             style={{ width: "50vw" }}
           />
@@ -45,7 +55,7 @@ function AddUser() {
             name="username"
             value={user.username}
             onChange={(event) => {
-              onAddUserInput(event);
+              onEditInput(event);
             }}
             style={{ width: "50vw" }}
           />
@@ -57,7 +67,7 @@ function AddUser() {
             name="email"
             value={user.email}
             onChange={(event) => {
-              onAddUserInput(event);
+              onEditInput(event);
             }}
             style={{ width: "50vw" }}
           />
@@ -69,7 +79,7 @@ function AddUser() {
             name="phone"
             value={user.phone}
             onChange={(event) => {
-              onAddUserInput(event);
+              onEditInput(event);
             }}
             style={{ width: "50vw" }}
           />
@@ -81,7 +91,7 @@ function AddUser() {
             name="website"
             value={user.website}
             onChange={(event) => {
-              onAddUserInput(event);
+              onEditInput(event);
             }}
             style={{ width: "50vw" }}
           />
@@ -93,4 +103,4 @@ function AddUser() {
   );
 }
 
-export default AddUser;
+export default EditUser;

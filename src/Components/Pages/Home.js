@@ -41,7 +41,7 @@ function Home() {
                   <NavLink>
                     <button className="view">View</button>
                   </NavLink>
-                  <NavLink>
+                  <NavLink to={`/users/edit/${user.id}`}>
                     <button className="edit">Edit</button>
                   </NavLink>
                   <NavLink>

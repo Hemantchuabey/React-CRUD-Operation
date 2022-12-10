@@ -6,6 +6,7 @@ import About from "./Components/Pages/About";
 import Contact from "./Components/Pages/Contact";
 import NotFound from "./Components/Pages/NotFound";
 import AddUser from "./Components/Users/AddUser";
+import EditUser from "./Components/Users/EditUser";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/users/add" element={<AddUser />} />
+          <Route exact path="/users/edit/:id" element={<EditUser />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
