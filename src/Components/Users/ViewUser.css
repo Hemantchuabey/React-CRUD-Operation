@@ -1,0 +1,9 @@
+.viewUl{
+    width: 100vw;
+    float: left;
+    /* background-color: black; */
+}
+.viewUl>div>h3{
+    margin-top: 1rem;
+    display: inline-block;
+}

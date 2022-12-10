@@ -7,6 +7,7 @@ import Contact from "./Components/Pages/Contact";
 import NotFound from "./Components/Pages/NotFound";
 import AddUser from "./Components/Users/AddUser";
 import EditUser from "./Components/Users/EditUser";
+import ViewUser from "./Components/Users/ViewUser";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/users/add" element={<AddUser />} />
           <Route exact path="/users/edit/:id" element={<EditUser />} />
+          <Route exact path="/users/view/:id" element={<ViewUser />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

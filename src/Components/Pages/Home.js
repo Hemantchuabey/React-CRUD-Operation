@@ -42,7 +42,7 @@ function Home() {
                 <td>{user.username}</td>
                 <td>{user.email}</td>
                 <td>
-                  <NavLink>
+                  <NavLink to={`/users/view/${user.id}`}>
                     <button className="view">View</button>
                   </NavLink>
                   <NavLink to={`/users/edit/${user.id}`}>

@@ -34,7 +34,7 @@ function EditUser() {
 
   return (
     <div>
-      <h1>Edit {user.name} Data</h1>
+      <h1>Edit {user.username} Data</h1>
       <form style={{ width: "100vw" }} onSubmit={(e) => onSubmitNewUser(e)}>
         <div>
           <input
