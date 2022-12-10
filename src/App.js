@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./Components/Pages/About";
 import Contact from "./Components/Pages/Contact";
 import NotFound from "./Components/Pages/NotFound";
+import AddUser from "./Components/Users/AddUser";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/users/add" element={<AddUser />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

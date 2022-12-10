@@ -47,3 +47,14 @@ margin-top: 0.6rem;
     background-color: red;
     color: whitesmoke;
 }
+
+.add-user{
+    box-sizing: border-box ;
+    margin-right: 10rem;
+    margin-bottom: 1rem;
+    padding: 0;
+    float: right;
+}
+.add-user>NavLink:hover{
+    background-color: #18f306;
+}

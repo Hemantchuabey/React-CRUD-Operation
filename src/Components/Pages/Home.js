@@ -14,6 +14,11 @@ function Home() {
   };
   return (
     <div>
+      <div className="add-user">
+        <NavLink to="users/add">
+          <button>Add User</button>
+        </NavLink>
+      </div>
       <table>
         <thead>
           <tr>

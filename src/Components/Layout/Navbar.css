@@ -28,7 +28,9 @@
     color: whitesmoke;
     font-size: 1.15rem;
 }
-
+.nav-link:hover{
+    color:hsl(35, 77%, 62%) ;
+}
 a{
     text-decoration: none;
     color: whitesmoke;
