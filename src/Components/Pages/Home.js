@@ -12,6 +12,10 @@ function Home() {
     const result = await axios.get("http://localhost:3003/users");
     setUsers(result.data);
   };
+  const deleteUser = async (id) => {
+    await axios.delete(`http://localhost:3003/users/${id}`);
+    loadUsers();
+  };
   return (
     <div>
       <div className="add-user">
@@ -45,7 +49,14 @@ function Home() {
                     <button className="edit">Edit</button>
                   </NavLink>
                   <NavLink>
-                    <button className="delete">Delete</button>
+                    <button
+                      className="delete"
+                      onClick={() => {
+                        deleteUser(user.id);
+                      }}
+                    >
+                      Delete
+                    </button>
                   </NavLink>
                 </td>
               </tr>
